@@ -22,7 +22,7 @@
     </figure>
 
     <div class="sessionListContainer">
-      <h2 class="sessionListTitle">Schedule</h2>
+      <h2 class="sessionListTitle">Schedule of Events</h2>
       <SessionList :program="program" :info="info" />
     </div>
   </section>
@@ -57,6 +57,7 @@ export default {
     }
   },
   async asyncData() {
+    console.log('query', query)
     return await sanityClient.fetch(query)
   },
   head() {
